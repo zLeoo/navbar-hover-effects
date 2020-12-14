@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+#container .item1 {
+  min-width: 100%;
+  height: 100vh;
+  background-color: red;
+  scroll-snap-align: center;
+}
+
+#container .item1 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40vh;
+}
+
+#container .item1 nav ul li {
+  margin-left: 50px;
+}
+
+#container .item1 nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+}
+
+#container .item2 {
+  min-width: 100%;
+  height: 100vh;
+  background-color: blue;
+  scroll-snap-align: center;
+}
+
+#container .item2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40vh;
+}
+
+#container .item2 ul li {
+  margin-left: 50px;
+}
+
+#container .item2 ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}
+
+#container .item3 {
+  min-width: 100%;
+  height: 100vh;
+  background-color: green;
+  scroll-snap-align: center;
+}
+
+#container .item3 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40vh;
+}
+
+#container .item3 ul li {
+  margin-left: 50px;
+}
+
+#container .item3 ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+}
+
+#container .item4 {
+  min-width: 100%;
+  height: 100vh;
+  background-color: darkgreen;
+  scroll-snap-align: center;
+}
+
+#container .item4 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40vh;
+}
+
+#container .item4 ul li {
+  overflow: hidden;
+  padding-top: 5px;
+  padding-right: 5px;
+  margin-left: 50px;
+}
+
+#container .item4 ul li a span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  position: relative;
+  color: white;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.item1 a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+
+.item1 a:hover::after {
+  opacity: 1;
+}
+
+.item2 a::before {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  content: attr(alt);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.item2 a:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.item3 a::before, .item3 a::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.item3 a::before {
+  top: -17px;
+}
+
+.item3 a::after {
+  bottom: -17px;
+}
+
+.item3 a:hover::before {
+  top: -3px;
+  opacity: 1;
+}
+
+.item3 a:hover::after {
+  bottom: -3px;
+  opacity: 1;
+}
+
+.item4 span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(alt);
+  font-weight: 600;
+  color: white;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.item4 a:hover span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.item4 span:hover::after {
+  top: 0;
+}
+/*# sourceMappingURL=style.css.map */
